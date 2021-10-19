@@ -38,20 +38,22 @@ export class BmiCalculatorFormComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.bmiForm = new FormGroup({
+      feet: new FormControl ({value: '', disabled: false}, [Validators.required, Validators.maxLength(2)]),
+      inches: new FormControl ({value: '', disabled: false}),
+      pounds: new FormControl ({value: '', disabled: false}, [Validators.required, Validators.maxLength(9)]),
+      result: new FormControl ({value: '', disabled: true}),
+    })
+
     if (this.type) {
       this.heightTextOne = 'ft';
       this.weightText = 'lbs';
+      this.bmiForm.get('inches')?.setValidators([Validators.required, Validators.maxLength(2)]);
+      this.bmiForm.updateValueAndValidity();
     } else {
       this.heightTextOne = 'cm';
       this.weightText = 'kg';
     }
-
-    this.bmiForm = new FormGroup({
-      feet: new FormControl ({value: '', disabled: false}, [Validators.required, Validators.maxLength(2)]),
-      inches: new FormControl ({value: '', disabled: false}, [Validators.required, Validators.maxLength(2)]),
-      pounds: new FormControl ({value: '', disabled: false}, [Validators.required, Validators.maxLength(9)]),
-      result: new FormControl ({value: '', disabled: true}),
-    })
 
     this.onChanges();
   }
@@ -96,7 +98,7 @@ export class BmiCalculatorFormComponent implements OnInit {
         pounds: this.weight
       })
 
-      this.calculateMetric(this.weight, this.actualHeight);
+      this.calculateMetric(this.weight, this.height);
     }
     this.bmi = this.calc.toFixed(1);
     this.bmiForm.patchValue({ result: this.bmi});
