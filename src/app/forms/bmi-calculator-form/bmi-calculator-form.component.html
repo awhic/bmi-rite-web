@@ -1,21 +1,23 @@
 <form [formGroup]="bmiForm" (ngSubmit)="onSubmit()">
-
+<div class="container">
     <div>
         <label for="feet">Height: </label>
-        <input formControlName="feet" type="number" placeholder="{{heightTextOne}}"> &nbsp;
-        <input [hidden]="!type" [disabled]="!type" type="number" formControlName="inches" placeholder="{{heightTextTwo}}">
+        <input formControlName="feet" type="number" class="form-control" placeholder="{{heightTextOne}}">&nbsp;
+        <div [hidden]="!type"><input class="form-control" type="number" formControlName="inches" placeholder="{{heightTextTwo}}"></div>&nbsp;
     </div>
 
     <div>
         <label for="pounds">Weight: </label>
-        <input formControlName="pounds" type="number" placeholder="{{weightText}}">
+        <input formControlName="pounds" class="form-control" type="number" placeholder="{{weightText}}">&nbsp;
     </div>
     
-    <div>
-        <button type="submit" [disabled]="bmiForm.invalid">Submit</button>
+    <div class="button">
+        <button type="submit" class="btn btn-primary" [disabled]="bmiForm.invalid">Submit</button>
     </div>
 
-    <div>
-        BMI: &nbsp;<input formControlName="result">
+    <div class="result">
+        <label for="result">Your BMI: </label>
+        <input class="form-control" formControlName="result">
     </div>
+</div>
 </form>
