@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bmi-rite';
-  type = true;
+  typeSelect = true;
+
+  public changeType() {
+    if (this.typeSelect) {
+      this.typeSelect = false;
+    } else {
+      this.typeSelect = true;
+    }
+  }
 }
