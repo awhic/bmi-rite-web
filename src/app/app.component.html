@@ -4,8 +4,19 @@
     width="40"
     alt="BMIRite Logo"
     src=""
+    draggable="false"
   />
     <div class="spacer"></div>
+
+    <div>
+      <label class="switch-theme">
+        <input type="checkbox">
+        <span (click)="changeTheme()" class="slider-th round"></span>
+      </label>
+      <img class="img-adj" src="assets/sun.png" [hidden]="!themeSelect" alt="Theme Icon" draggable="false">
+      <img class="img-adj" src="assets/moon.png" [hidden]="themeSelect" alt="Theme Icon" draggable="false">
+    </div>
+
     <a aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
       <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
         <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -19,7 +30,7 @@
 
   <label class="standardLbl" [hidden]="!typeSelect">Standard</label>
   <label class="metricLbl" [hidden]="typeSelect">Metric</label>
-  <label class="switch">
+  <label class="switch-type">
     <input type="checkbox">
     <span (click)="changeType()" class="slider round"></span>
   </label>
