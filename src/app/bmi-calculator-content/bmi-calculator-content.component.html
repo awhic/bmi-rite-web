@@ -1,0 +1,13 @@
+<div class="content">
+    <label class="standardLbl" [hidden]="!typeSelect">Standard</label>
+    <label class="metricLbl" [hidden]="typeSelect">Metric</label>
+    <button class="btn btn-primary button" (click)="changeType()">Change Measure</button>
+
+    <app-bmi-calculator-form [type]="true" [hidden]="!typeSelect" disabled="!typeSelect">
+    
+    </app-bmi-calculator-form>
+
+    <app-bmi-calculator-form [type]="false" [hidden]="typeSelect" disabled="typeSelect">
+    
+    </app-bmi-calculator-form>
+</div>
