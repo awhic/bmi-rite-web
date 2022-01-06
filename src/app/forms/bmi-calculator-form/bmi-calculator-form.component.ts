@@ -31,6 +31,8 @@ export class BmiCalculatorFormComponent implements OnInit {
   heightTextOne!: string;
   heightTextTwo = 'in';
 
+  invalid = false;
+
   bmiForm!: FormGroup;
 
 
@@ -62,7 +64,7 @@ export class BmiCalculatorFormComponent implements OnInit {
 
   }
 
-  calculateEnglish(collectedWeight: number, collectedHeight: number) {
+  calculateStandard(collectedWeight: number, collectedHeight: number) {
     this.calc = 
       ((collectedWeight / collectedHeight / collectedHeight) * this.englishModifier);
   }
@@ -79,6 +81,13 @@ export class BmiCalculatorFormComponent implements OnInit {
       this.height = this.bmiForm.get('feet')?.value;
       this.heightOverflow = this.bmiForm.get('inches')?.value;
 
+      // validation
+      if (this.weight > 999 || this.heightOverflow > 11 || this.height > 9) {
+        this.invalid = true;
+      } else if (this.weight < 50 || this.heightOverflow < 0 || this.height < 2) {
+        this.invalid = true;
+      }
+
       this.bmiForm.patchValue({
         feet: this.height,
         inches: this.heightOverflow,
@@ -87,11 +96,18 @@ export class BmiCalculatorFormComponent implements OnInit {
 
       this.actualHeight = (this.height * 12) + this.heightOverflow;
 
-      this.calculateEnglish(this.weight, this.actualHeight);
+      this.calculateStandard(this.weight, this.actualHeight);
     } else {
 
       this.weight = this.bmiForm.get('pounds')?.value;
       this.height = this.bmiForm.get('feet')?.value;
+
+      // validation
+      if (this.weight > 453.1388 || this.height > 274.32) {
+        this.invalid = true;
+      } else if (this.weight < 22.67962 || this.height < 60.96) {
+        this.invalid = true;
+      }
 
       this.bmiForm.patchValue({
         feet: this.height,
@@ -100,7 +116,14 @@ export class BmiCalculatorFormComponent implements OnInit {
 
       this.calculateMetric(this.weight, this.height);
     }
-    this.bmi = this.calc.toFixed(1);
+
+    if (!this.invalid) {
+      this.bmi = this.calc.toFixed(1);
+    } else {
+      this.bmi = "Data provided is invalid. Check your input.";
+    }
     this.bmiForm.patchValue({ result: this.bmi});
+
+    this.invalid = false;
   }
 }

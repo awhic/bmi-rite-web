@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bmi-calculator-content.component.html',
   styleUrls: ['./bmi-calculator-content.component.scss']
 })
-export class BmiCalculatorContentComponent implements OnInit {
+export class BmiCalculatorContentComponent {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  // ngOnInit(): void { }
 
   typeSelect = true;
 

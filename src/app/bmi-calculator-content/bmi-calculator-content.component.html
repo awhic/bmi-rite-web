@@ -1,13 +1,36 @@
-<div class="content">
-    <label class="standardLbl" [hidden]="!typeSelect">Standard</label>
-    <label class="metricLbl" [hidden]="typeSelect">Metric</label>
-    <button class="btn btn-primary button" (click)="changeType()">Change Measure</button>
-
-    <app-bmi-calculator-form [type]="true" [hidden]="!typeSelect" disabled="!typeSelect">
+<mat-card class="info">
+    <mat-card-title>
+        Body Mass Index (BMI)
+    </mat-card-title>
+    <mat-card-content>
+        <p><strong>Underweight: < 18.5 </strong></p>
+        <p><strong>Normal Range: 18.5 - 24.9 </strong></p>
+        <p><strong>Overweight: 25.0 - 29.9 </strong></p>
+        <p><strong>Obese: > 30.0 </strong></p>
+    </mat-card-content>
+</mat-card>
     
-    </app-bmi-calculator-form>
-
-    <app-bmi-calculator-form [type]="false" [hidden]="typeSelect" disabled="typeSelect">
+    <mat-card class="content">
+        <label class="standardLbl" [hidden]="!typeSelect">Standard</label>
+        <label class="metricLbl" [hidden]="typeSelect">Metric</label>
+        <button class="btn btn-primary button" (click)="changeType()">Change Measure</button>
     
-    </app-bmi-calculator-form>
-</div>
+        <app-bmi-calculator-form [type]="true" [hidden]="!typeSelect" disabled="!typeSelect">
+        
+        </app-bmi-calculator-form>
+    
+        <app-bmi-calculator-form [type]="false" [hidden]="typeSelect" disabled="typeSelect">
+        
+        </app-bmi-calculator-form>
+    </mat-card>
+
+    <a aria-label="CDC.gov" target="_blank" rel="noopener" href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" title="CDC.gov">
+        <mat-card class="resc">
+            <mat-card-subtitle>
+                <em>According to CDC.gov:</em>
+            </mat-card-subtitle>
+            <mat-card-content>
+                A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.
+            </mat-card-content>
+        </mat-card>
+    </a>
