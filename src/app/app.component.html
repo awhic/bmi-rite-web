@@ -7,10 +7,10 @@
        />
   <div class="spacer">
   </div>
-  <mat-slide-toggle draggable="false" (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch">
-    <span>&nbsp;</span><span>&nbsp;</span><img draggable="false" width="24" height="24" src="/assets/sun.png" [hidden]="themeSelect" />
-    <img draggable="false" width="24" height="24" src="/assets/moon.png" [hidden]="!themeSelect" />
+  <mat-slide-toggle (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch">
   </mat-slide-toggle>
+  <span>&nbsp;</span><span>&nbsp;</span><img draggable="false" width="24" height="24" src="/assets/sun.png" [hidden]="themeSelect" />
+  <img draggable="false" width="24" height="24" src="/assets/moon.png" [hidden]="!themeSelect" />
   <span class="vertical-line"></span>
   <a draggable="false" class="git" aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
     <img draggable="false" width="24" height="24" src="/assets/github.png"/>

@@ -1,4 +1,4 @@
-<mat-card class="info">
+<mat-card class="info themel">
     <mat-card-title>
         Body Mass Index (BMI)
     </mat-card-title>
@@ -10,7 +10,7 @@
     </mat-card-content>
 </mat-card>
     
-    <mat-card class="content">
+    <mat-card class="content themel">
         <label class="standardLbl" [hidden]="!typeSelect">Standard</label>
         <label class="metricLbl" [hidden]="typeSelect">Metric</label>
         <button class="btn btn-primary button" (click)="changeType()">Change Measure</button>
@@ -24,8 +24,8 @@
         </app-bmi-calculator-form>
     </mat-card>
 
-    <a aria-label="CDC.gov" target="_blank" rel="noopener" href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" title="CDC.gov">
-        <mat-card class="resc">
+    <a class="resc" aria-label="CDC.gov" target="_blank" rel="noopener" href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" title="CDC.gov">
+        <mat-card class="resc themel">
             <mat-card-subtitle>
                 <em>According to CDC.gov:</em>
             </mat-card-subtitle>
