@@ -1,6 +1,5 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-bmi-calculator-form',

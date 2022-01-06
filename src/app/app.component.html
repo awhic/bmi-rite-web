@@ -1,39 +1,23 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-
-  <img
-    width="40"
-    alt="BMIRite Logo"
-    src="favicon.ico"
-  />
-
-  <div class="spacer"></div>
-
-  <a aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
-    <img
-      width="48"
-      height="48"
-      alt="Github"
-      src="assets/github.png"
-      draggable="false"
-    />
+  <img draggable="false" class="logo"
+       width="40"
+       alt="BMIRite Logo"
+       src="favicon.ico"
+       />
+  <div class="spacer">
+  </div>
+  <a draggable="false" class="git" aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
+    <img draggable="false" width="24" height="24" src="/assets/github.png"/>
   </a>
-
-  <a aria-label="YouTube" target="_blank" rel="noopener" href="https://youtube.com" title="Youtube">
-    <img
-      width="33"
-      height="24"
-      alt="Github"
-      src="assets/youtube.png"
-      draggable="false"
-    />
+  <a draggable="false" class="yt" aria-label="YouTube" target="_blank" rel="noopener" href="https://youtube.com" title="Youtube" href="https://youtube.com">
+    <img draggable="false" width="24" height="18" src="/assets/youtube.png"/>
   </a>
-  
 </div>
-
 <!-- Content -->
 <div>
-  <app-bmi-calculator-content></app-bmi-calculator-content>
+  <app-bmi-calculator-content>
+  </app-bmi-calculator-content>
 </div>
-
-<router-outlet></router-outlet>
+<router-outlet>
+</router-outlet>
