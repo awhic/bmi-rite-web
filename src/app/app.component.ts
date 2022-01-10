@@ -7,7 +7,7 @@ import { ThemePalette } from '@angular/material/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bmi-rite';
+  title = 'lex-tools';
   themeSelect = false;
   switchColor: ThemePalette = 'primary';
 

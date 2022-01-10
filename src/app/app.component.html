@@ -1,10 +1,7 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img draggable="false" class="logo"
-       width="40"
-       alt="BMIRite Logo"
-       src="favicon.ico"
-       />
+  <img draggable="false" class="logo" width="40" alt="BMIRite Logo" src="favicon.ico" />
+  <nav><a routerLinkActive='active' routerLink="/bmi">BMI Calculator</a><a routerLinkActive='active' routerLink="/fridae">Fridae</a><a routerLinkActive='active' routerLink="/home">Home</a></nav>
   <div class="spacer">
   </div>
   <mat-slide-toggle (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch">
@@ -19,10 +16,8 @@
     <img draggable="false" width="24" height="18" src="/assets/youtube.png"/>
   </a>
 </div>
+
 <!-- Content -->
 <div>
-  <app-bmi-calculator-content>
-  </app-bmi-calculator-content>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet>
-</router-outlet>
