@@ -73,11 +73,10 @@ p {
 }
 
 .nav-link-custom {
-    color: white;
     float: left;
     padding: 8px;
+	margin-right: 4px;
     border-radius: 8px;
-    text-decoration: none;
 }
 
 .nav-link-custom:hover {
@@ -92,7 +91,7 @@ p {
 }
 
 .nav-link-custom:active {
-    background-color:  #1359a0;
+    background-color:  #1566b7;
     text-decoration: none;
 }
 
@@ -100,3 +99,7 @@ p {
     text-decoration: none;
 	background-color: #1359a0;
 }
+
+a:active {
+	background-color: yellow;
+  }
