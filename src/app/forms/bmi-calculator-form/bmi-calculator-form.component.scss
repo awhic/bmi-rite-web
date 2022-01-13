@@ -6,10 +6,16 @@
 
 .button {
     text-align: center;
+    cursor: pointer;
 }
 
 .result {
     margin-top: 15%;
     font-size: larger;
     text-align: center;
+    cursor: text;
+}
+
+.res {
+    cursor: text;
 }

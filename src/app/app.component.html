@@ -1,12 +1,20 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img draggable="false" class="logo"
-       width="40"
-       alt="BMIRite Logo"
-       src="favicon.ico"
-       />
+  <img draggable="false" class="logo" width="40" alt="BMIRite Logo" src="favicon.ico" />
+  <nav>
+    <ul class="navbar-custom">
+      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/home">Home</a></li>
+      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/fridae">Financials</a></li>
+      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/bmi">BMI Calculator</a></li>
+    </ul>
+  </nav>
   <div class="spacer">
   </div>
+  <mat-slide-toggle (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch">
+  </mat-slide-toggle>
+  <span>&nbsp;</span><span>&nbsp;</span><img draggable="false" width="24" height="24" src="/assets/sun.png" [hidden]="themeSelect" />
+  <img draggable="false" width="24" height="24" src="/assets/moon.png" [hidden]="!themeSelect" />
+  <span class="vertical-line"></span>
   <a draggable="false" class="git" aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
     <img draggable="false" width="24" height="24" src="/assets/github.png"/>
   </a>
@@ -16,8 +24,5 @@
 </div>
 <!-- Content -->
 <div>
-  <app-bmi-calculator-content>
-  </app-bmi-calculator-content>
+  <router-outlet id="page"></router-outlet>
 </div>
-<router-outlet>
-</router-outlet>
