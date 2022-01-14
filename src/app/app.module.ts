@@ -8,6 +8,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +20,7 @@ import { FridaeContentComponent } from './fridae-content/fridae-content.componen
 import { RouterModule } from '@angular/router';
 import { HomeContentComponent } from './home-content/home-content.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PlotAmountTableComponent } from './tables/plot-amount-table/plot-amount-table.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BmiCalculatorContentComponent,
     FridaeContentComponent,
     HomeContentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PlotAmountTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatSlideToggleModule,
     MatRippleModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
