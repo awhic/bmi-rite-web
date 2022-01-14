@@ -2,24 +2,25 @@
 <div class="toolbar" role="banner">
   <img draggable="false" class="logo" width="40" alt="BMIRite Logo" src="favicon.ico" />
   <nav>
-    <ul class="navbar-custom">
-      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/home">Home</a></li>
-      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/fridae">Financials</a></li>
-      <li><a class='nav-link-custom' routerLinkActive='active' routerLink="/bmi">BMI Calculator</a></li>
-    </ul>
+      <ul class="navbar-custom">
+          <li><a matRipple class='nav-link-custom' routerLinkActive='active' routerLink="/home">Home</a></li>
+          <li><a matRipple class='nav-link-custom' routerLinkActive='active' routerLink="/fridae">Financials</a></li>
+          <li><a matRipple class='nav-link-custom' routerLinkActive='active' routerLink="/bmi">BMI Calculator</a></li>
+      </ul>
   </nav>
   <div class="spacer">
   </div>
-  <mat-slide-toggle (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch">
+  <mat-slide-toggle (change)="changeTheme()" [color]="switchColor" [checked]="themeSelect" class="themeSwitch" 
+    #tooltip="matTooltip" matTooltip="Theme Selector is currently under development." [matTooltipPosition]="position.value">
   </mat-slide-toggle>
   <span>&nbsp;</span><span>&nbsp;</span><img draggable="false" width="24" height="24" src="/assets/sun.png" [hidden]="themeSelect" />
   <img draggable="false" width="24" height="24" src="/assets/moon.png" [hidden]="!themeSelect" />
   <span class="vertical-line"></span>
-  <a draggable="false" class="git" aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
-    <img draggable="false" width="24" height="24" src="/assets/github.png"/>
+  <a matRipple draggable="false" class="git" aria-label="Github" target="_blank" rel="noopener" href="https://github.com/awhic" title="Github">
+      <img draggable="false" width="24" height="24" src="/assets/github.png" />
   </a>
-  <a draggable="false" class="yt" aria-label="YouTube" target="_blank" rel="noopener" href="https://youtube.com" title="Youtube" href="https://youtube.com">
-    <img draggable="false" width="24" height="18" src="/assets/youtube.png"/>
+  <a matRipple draggable="false" class="yt" aria-label="YouTube" target="_blank" rel="noopener" href="https://youtube.com" title="Youtube" href="https://youtube.com">
+      <img draggable="false" width="24" height="18" src="/assets/youtube.png" />
   </a>
 </div>
 <!-- Content -->
