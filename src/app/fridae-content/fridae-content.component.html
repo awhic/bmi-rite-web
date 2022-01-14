@@ -5,11 +5,17 @@
     <mat-card-content>
         <mat-card class="tab-data-card">
             <mat-tab-group mat-align-tabs="start">
-                <mat-tab label="Add">Add</mat-tab>
-                <mat-tab label="Table"><app-plot-amount-table>
+                <mat-tab label="Current">
+                    <app-add-net-assets-graph-form>
+
+                    </app-add-net-assets-graph-form>
+                </mat-tab>
+                <mat-tab label="Table">
+                    <app-plot-amount-table>
                     
-                </app-plot-amount-table></mat-tab>
-              </mat-tab-group>
+                    </app-plot-amount-table>
+                </mat-tab>
+            </mat-tab-group>
         </mat-card>
         <mat-card class="graph-card">
 

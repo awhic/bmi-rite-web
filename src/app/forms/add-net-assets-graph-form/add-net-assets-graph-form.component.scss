@@ -1,0 +1,32 @@
+.container {
+    max-width: 300px;
+    float: left;
+}
+
+.buttonAlign {
+    text-align: center;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 15%;
+    font-size: larger;
+    text-align: center;
+    cursor: text;
+    float: right;
+}
+
+.res {
+    cursor: text;
+}
+
+.button {
+    background-color: #1976d2;
+    color: white;
+}
+
+label {
+    float: left;
+    width: 10em;
+    margin-right: 1em;
+}

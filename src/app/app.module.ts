@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { HomeContentComponent } from './home-content/home-content.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PlotAmountTableComponent } from './tables/plot-amount-table/plot-amount-table.component';
+import { AddNetAssetsGraphFormComponent } from './forms/add-net-assets-graph-form/add-net-assets-graph-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PlotAmountTableComponent } from './tables/plot-amount-table/plot-amount
     FridaeContentComponent,
     HomeContentComponent,
     NotFoundComponent,
-    PlotAmountTableComponent
+    PlotAmountTableComponent,
+    AddNetAssetsGraphFormComponent
   ],
   imports: [
     BrowserModule,
