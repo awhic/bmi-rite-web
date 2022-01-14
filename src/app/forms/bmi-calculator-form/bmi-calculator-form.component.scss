@@ -4,7 +4,7 @@
     font-size: larger;
 }
 
-.button {
+.buttonAlign {
     text-align: center;
     cursor: pointer;
 }
@@ -18,4 +18,9 @@
 
 .res {
     cursor: text;
+}
+
+.button {
+    background-color: #1976d2;
+    color: white;
 }
