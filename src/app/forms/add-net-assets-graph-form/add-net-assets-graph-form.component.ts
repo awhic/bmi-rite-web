@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-add-net-assets-graph-form',
@@ -7,6 +8,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-net-assets-graph-form.component.scss']
 })
 export class AddNetAssetsGraphFormComponent implements OnInit {
+
+    //TODO: Tooltip to show that dark/light mode under development. Will be removed when completed.
+    positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+    position = new FormControl(this.positionOptions[0]);
 
   invOne!: number;
   invTwo!: number;

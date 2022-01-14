@@ -32,5 +32,21 @@ const TEST_DATA: PlotPoint[] = [
   {position: 5, date: '02/07/22', amount: '$74,538'},
   {position: 6, date: '02/14/22', amount: '$73,100'},
   {position: 7, date: '02/21/22', amount: '$74,000'},
-  {position: 8, date: '02/28/22', amount: '$73,330'}
+  {position: 8, date: '02/28/22', amount: '$73,330'},
+  {position: 9, date: '01/07/22', amount: '$70,000'},
+  {position: 10, date: '01/14/22', amount: '$71,330'},
+  {position: 11, date: '01/21/22', amount: '$70,900'},
+  {position: 12, date: '01/28/22', amount: '$73,556'},
+  {position: 13, date: '02/07/22', amount: '$74,538'},
+  {position: 14, date: '02/14/22', amount: '$73,100'},
+  {position: 15, date: '02/21/22', amount: '$74,000'},
+  {position: 16, date: '02/28/22', amount: '$73,330'},
+  {position: 17, date: '01/07/22', amount: '$70,000'},
+  {position: 18, date: '01/14/22', amount: '$71,330'},
+  {position: 19, date: '01/21/22', amount: '$70,900'},
+  {position: 20, date: '01/28/22', amount: '$73,556'},
+  {position: 21, date: '02/07/22', amount: '$74,538'},
+  {position: 22, date: '02/14/22', amount: '$73,100'},
+  {position: 23, date: '02/21/22', amount: '$74,000'},
+  {position: 24, date: '02/28/22', amount: '$73,330'}
 ];

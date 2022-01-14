@@ -1,6 +1,7 @@
 <form [formGroup]="assetsForm" (ngSubmit)="onUpdate()">
+<div class="holder">
     <div class="container">
-        <div>
+        <div class="inputs">
             <label for="invOne">{{text1}}</label>
             <input formControlName="invOne" class="form-control">
 
@@ -39,14 +40,16 @@
         </div>
     </div>
 
-    <div class="result">
-        <label for="result">Current Net Assets</label>
+    <div class="container result">
+        <label class="resultText" for="result">Current Net Assets</label>
         <input class="form-control res" formControlName="result">
 
         <div class="buttonAlign">
             <button mat-raised-button type="submit" class="button" [disabled]="assetsForm.invalid">Update</button>
-            <button mat-raised-button class="button" [disabled]="assetsForm.invalid">Add to Graph</button>
+            <button mat-raised-button class="button" [disabled]="true" #tooltip="matTooltip" matTooltip="Graph is currently under development." 
+                [matTooltipPosition]="position.value">Add to Graph</button>
         </div>
     </div>
-    </form>
+</div>
+</form>
     
