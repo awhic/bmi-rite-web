@@ -1,0 +1,23 @@
+<form [formGroup]="passForm">
+    <div class="container">
+        <div class="len">
+            <label for="length">Length</label>
+            <input formControlName="length" class="form-control" type="number" placeholder="Enter a length (4-99)">&nbsp;
+        </div>
+
+        <div class="chbx">
+            <mat-checkbox color="primary" (change)="updateSelect()" [checked]="specSelect" formControlName="specialChars">Special Characters</mat-checkbox>
+        </div>
+        
+        <div class="buttonAlign">
+            <button mat-raised-button color="primary" class="button g" (click)="onSubmit()" [disabled]="passForm.invalid">Generate</button>
+        </div>
+        <div class="buttonAlign">
+            <button mat-raised-button color="primary" class="button c" (click)="copyToClipboard()" [disabled]="outputBlank">Copy to Clipboard</button>
+        </div>
+    </div>
+    <div class="result container-res">
+        <label for="result">Your Password:</label>
+        <input class="form-control res" formControlName="result">
+    </div>
+</form>
