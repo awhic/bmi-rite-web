@@ -1,0 +1,55 @@
+<form [formGroup]="assetsForm" (ngSubmit)="onUpdate()">
+<div class="holder">
+    <div class="container">
+        <div class="inputs">
+            <label for="invOne">{{text1}}</label>
+            <input formControlName="invOne" class="form-control">
+
+            <label for="invTwo">{{text2}}</label>
+            <input formControlName="invTwo" class="form-control">
+
+            <label for="retire">{{text12}}</label>
+            <input formControlName="retire" class="form-control">
+
+            <label for="cryptoOne">{{text3}}</label>
+            <input formControlName="cryptoOne" class="form-control">
+
+            <label for="cryptoTwo">{{text4}}</label>
+            <input formControlName="cryptoTwo" class="form-control">
+
+            <label for="cryptoWallet">{{text5}}</label>
+            <input formControlName="cryptoWallet" class="form-control">
+
+            <label for="auto">{{text6}}</label>
+            <input formControlName="auto" class="form-control">
+
+            <label for="checking">{{text7}}</label>
+            <input formControlName="checking" class="form-control">
+
+            <label for="saving">{{text8}}</label>
+            <input formControlName="saving" class="form-control">
+
+            <label for="creditOne">{{text9}}</label>
+            <input formControlName="creditOne" class="form-control">
+
+            <label for="creditTwo">{{text10}}</label>
+            <input formControlName="creditTwo" class="form-control">
+
+            <label for="misc">{{text11}}</label>
+            <input formControlName="misc" class="form-control">
+        </div>
+    </div>
+
+    <div class="container result">
+        <label class="resultText" for="result">Current Net Assets</label>
+        <input class="form-control res" formControlName="result">
+
+        <div class="buttonAlign">
+            <button mat-raised-button type="submit" class="button" [disabled]="assetsForm.invalid">Update</button>
+            <button mat-raised-button class="button" [disabled]="true" #tooltip="matTooltip" matTooltip="Graph is currently under development." 
+                [matTooltipPosition]="position.value">Add to Graph</button>
+        </div>
+    </div>
+</div>
+</form>
+    

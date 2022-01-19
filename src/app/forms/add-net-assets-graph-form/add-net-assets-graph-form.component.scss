@@ -1,0 +1,57 @@
+.container {
+    max-width: 50%;
+    float: left;
+    min-width: 25%;
+    margin-bottom: 0.75%;
+}
+
+.buttonAlign {
+    text-align: center;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 15%;
+    font-size: larger;
+    text-align: center;
+    cursor: text;
+    float: right;
+    max-width: 50%;
+}
+
+.res {
+    cursor: text;
+}
+
+.button {
+    background-color: #1976d2;
+    margin: 5%;
+    color: white;
+}
+
+.resultText {
+    display: inline-flex;
+    font-size: larger;
+}
+
+.inputs {
+    margin-top: 16px;
+}
+
+.inputs > label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.inputs > input {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.holder {
+    margin-bottom: 10%;
+}
