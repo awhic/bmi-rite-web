@@ -8,6 +8,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatIconModule} from '@angular/material/icon';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +20,8 @@ import { FridaeContentComponent } from './fridae-content/fridae-content.componen
 import { RouterModule } from '@angular/router';
 import { HomeContentComponent } from './home-content/home-content.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { QuikPassContentComponent } from './quik-pass-content/quik-pass-content.component';
+import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BmiCalculatorContentComponent,
     FridaeContentComponent,
     HomeContentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    QuikPassContentComponent,
+    QuikPassFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: 'bmi', component: BmiCalculatorContentComponent },
       { path: 'fridae', component: FridaeContentComponent },
       { path: 'home', component: HomeContentComponent },
+      { path: 'password', component: QuikPassContentComponent},
+      { path: 'not-found', component: NotFoundComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
     ]),
@@ -48,7 +57,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatSlideToggleModule,
     MatRippleModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
