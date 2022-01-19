@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bmi-rite-web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
