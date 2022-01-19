@@ -13,3 +13,111 @@
         color: #155724 !important;
     }
 }
+
+:host {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 14px;
+	color: #333;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 8px 0;
+}
+
+p {
+	margin: 0;
+}
+
+.spacer {
+	flex: 1;
+}
+
+.toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	background-color: #1976d2;
+	color: white;
+	font-weight: 600;
+}
+
+.logo {
+	margin: 0 16px;
+}
+
+.vertical-line{
+	display: inline-block;
+	border-left: 2px solid #fff;
+	margin: 0 25px;
+	height: 35px;
+}
+
+.git {
+	margin-right: 18px;
+}
+
+.yt {
+	margin-right: 24px;
+	padding-bottom: 2px;
+}
+
+.content {
+	display: flex;
+	margin: 82px auto 32px;
+	padding: 0 16px;
+	max-width: 960px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navbar-custom {
+    list-style-type: none;
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.nav-link-custom {
+    float: left;
+    padding: 8px;
+	margin-right: 4px;
+    border-radius: 8px;
+}
+
+.nav-link-custom:hover {
+    color: white;
+    background-color: #1566b7;
+    text-decoration: none;
+}
+
+.nav-link-custom:link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link-custom:active {
+    background-color:  #1566b7;
+    text-decoration: none;
+}
+
+.nav-link-custom:visited {
+    text-decoration: none;
+	background-color: #1359a0;
+}
+
+.title {
+	font-family: fantasy;
+	font-size: x-large;
+	margin-left: 1.25%;
+}
