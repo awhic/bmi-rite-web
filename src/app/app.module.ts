@@ -37,7 +37,7 @@ import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.com
     HomeContentComponent,
     NotFoundComponent,
     PlotAmountTableComponent,
-    AddNetAssetsGraphFormComponent
+    AddNetAssetsGraphFormComponent,
     QuikPassContentComponent,
     QuikPassFormComponent
   ],
