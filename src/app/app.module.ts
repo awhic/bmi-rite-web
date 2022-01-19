@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatIconModule} from '@angular/material/icon';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,6 +42,7 @@ import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.com
       { path: 'fridae', component: FridaeContentComponent },
       { path: 'home', component: HomeContentComponent },
       { path: 'password', component: QuikPassContentComponent},
+      { path: 'not-found', component: NotFoundComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
     ]),
@@ -57,7 +59,8 @@ import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.com
     MatButtonModule,
     MatTooltipModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
