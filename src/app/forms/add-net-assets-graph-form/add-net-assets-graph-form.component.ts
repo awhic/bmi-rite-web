@@ -68,15 +68,15 @@ export class AddNetAssetsGraphFormComponent implements OnInit {
 
   updateTexts() {
     this.text1 = "Fidelity";
-    this.text2 = "Vanguard";
+    this.text2 = "TDAmeritrade";
     this.text3 = "Coinbase";
     this.text4 = "Binance";
-    this.text5 = "Yoroi";
-    this.text6 = "Truck Worth";
+    this.text5 = "OpenSea.ai";
+    this.text6 = "Home";
     this.text7 = "Checking";
     this.text8 = "Savings";
-    this.text9 = "Discover";
-    this.text10 = "American Express";
+    this.text9 = "Visa";
+    this.text10 = "Capital One";
     this.text11 = "Misc. Mo. Exp./Disp.";
     this.text12 = "401(k)";
   }
