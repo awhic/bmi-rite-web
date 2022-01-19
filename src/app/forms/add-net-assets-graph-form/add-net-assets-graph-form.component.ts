@@ -92,8 +92,8 @@ export class AddNetAssetsGraphFormComponent implements OnInit {
     this.auto = this.assetsForm.get('auto')?.value;
     this.checking = this.assetsForm.get('checking')?.value;
     this.saving = this.assetsForm.get('saving')?.value;
-    this.creditOne = this.assetsForm.get('creditOne')?.value * -1;
-    this.creditTwo = this.assetsForm.get('creditTwo')?.value * -1;
+    this.creditOne = this.assetsForm.get('creditOne')?.value;
+    this.creditTwo = this.assetsForm.get('creditTwo')?.value;
     this.misc = this.assetsForm.get('misc')?.value;
 
     this.assetsForm.patchValue({
@@ -112,10 +112,13 @@ export class AddNetAssetsGraphFormComponent implements OnInit {
     })
 
     this.total = this.invOne + this.invTwo + this.retire + this.cryptoOne + this.cryptoTwo + this.cryptoWallet + this.auto + 
-                  this.checking + this.saving + this.creditOne + this.creditTwo + this.misc;
+                  this.checking + this.saving + (this.creditOne * -1) + (this.creditTwo * -1) + this.misc;
     
     this.assetsForm.patchValue({
-      result: this.total
+      result: this.total.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD"
+      })
     })
   }
 }

@@ -21,6 +21,7 @@
 
 .res {
     cursor: text;
+    text-align: center;
 }
 
 .button {
@@ -45,10 +46,14 @@
     margin-right: 8px;
 }
 
+.neg {
+    color: darkred;
+}
+
 .inputs > input {
     display: inline-block;
     width: 150px;
-    text-align: right;
+    text-align: left;
     margin-bottom: 8px;
 }
 
