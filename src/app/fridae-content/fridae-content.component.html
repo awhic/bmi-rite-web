@@ -1,1 +1,35 @@
-<p style="margin-top: 90px;">fridae-content works!</p>
+<mat-card class="main">
+    <mat-card-content id="netAssets">
+        <mat-tab-group mat-align-tabs="start">
+
+            <mat-tab label=" Fridae: Net Assets Calculator">
+                <mat-card class="tab-data-card">
+                    <mat-tab-group mat-align-tabs="start">
+                        <mat-tab label="Current">
+                            <app-add-net-assets-graph-form>
+        
+                            </app-add-net-assets-graph-form>
+                        </mat-tab>
+                        <mat-tab label="Table">
+                            <app-plot-amount-table>
+                            
+                            </app-plot-amount-table>
+                        </mat-tab>
+                        <mat-tab label="Misc. Mo. Exp./Disp." disabled="true">
+
+                        </mat-tab>
+                        <mat-tab label="Settings" disabled="true">
+
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-card>
+                <!-- <mat-card class="graph-card">
+                </mat-card> -->
+            </mat-tab>
+
+            <mat-tab label="Fridae: Monthly Budget Helper" disabled="true">
+                
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

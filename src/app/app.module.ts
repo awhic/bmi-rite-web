@@ -8,6 +8,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
@@ -20,6 +23,8 @@ import { FridaeContentComponent } from './fridae-content/fridae-content.componen
 import { RouterModule } from '@angular/router';
 import { HomeContentComponent } from './home-content/home-content.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PlotAmountTableComponent } from './tables/plot-amount-table/plot-amount-table.component';
+import { AddNetAssetsGraphFormComponent } from './forms/add-net-assets-graph-form/add-net-assets-graph-form.component';
 import { QuikPassContentComponent } from './quik-pass-content/quik-pass-content.component';
 import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.component';
 
@@ -31,6 +36,8 @@ import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.com
     FridaeContentComponent,
     HomeContentComponent,
     NotFoundComponent,
+    PlotAmountTableComponent,
+    AddNetAssetsGraphFormComponent
     QuikPassContentComponent,
     QuikPassFormComponent
   ],
@@ -58,6 +65,9 @@ import { QuikPassFormComponent } from './forms/quik-pass-form/quik-pass-form.com
     MatRippleModule,
     MatButtonModule,
     MatTooltipModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatCheckboxModule,
     MatSnackBarModule,
     MatIconModule
